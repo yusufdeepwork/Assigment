@@ -243,7 +243,7 @@ class Store {
             if (clubCustomers.get(i).getPhone().equals(phone))
                 return clubCustomers.get(i);
         }
-        throw new ProductNotFoundException(name);
+        throw new CostumerNotFoundException(name);
     }
 
     public void removeProduct(String name) {
@@ -270,7 +270,7 @@ class Store {
             }
         }
         if (!isCostumerPhone)
-            throw new ProductNotFoundException(name);
+            throw new CostumerNotFoundException(name);
     }
 
 }
